@@ -37,43 +37,10 @@ function wpimw_badges_options_page() {
     if (!current_user_can( 'manage_options' ) ) {
         
         wp_die( 'You do not have sufficient permissions to access this page.' );
-    } else {
+    } 
     
-    echo '<p>Welcome to our plugin page!</p>';
-    }
+    require( 'inc/options-page-wrapper.php' );
+        
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
