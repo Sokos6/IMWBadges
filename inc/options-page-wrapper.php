@@ -1,121 +1,122 @@
+<div class="wrap">
+	
+	<div id="icon-options-general" class="icon32"></div>
+	<h2>The Official IMW Badges Plugin</h2>
+	
+	<div id="poststuff">
+	
+		<div id="post-body" class="metabox-holder columns-2">
+		
+			<!-- main content -->
+			<div id="post-body-content">
+				
+				<div class="meta-box-sortables ui-sortable">
 
-    <div class="wrap">
+					<?php if( !isset( $wpimw_username ) || $wpimw_username == '' ): ?>
 
-    <div id="icon-options-general" class="icon32"></div>
-    <h1>IMW Badges</h1>
+					<div class="postbox">
+					
+						<h3><span>Let's Get Started!</span></h3>
+						<div class="inside">
+							
+							<form name="wpimw_username_form" method="post" action="">							
 
-    <div id="poststuff">
+							<input type="hidden" name="wpimw_form_submitted" value="Y">
 
-        <div id="post-body" class="metabox-holder columns-2">
+							<table class="form-table">
+								<tr>
+									<td>
+										<label for="wpimw_username">IMW Username</label>
+									</td>
+									<td>
+										<input name="wpimw_username" id="wpimw_username" type="text" value="" class="regular-text" />
+									</td>
+								</tr>								
+							</table>
 
-            <!-- main content -->
-            <div id="post-body-content">
+							<p>
+								<input class="button-primary" type="submit" name="wpimw_usename_submit" value="Save" /> 
+							</p>
 
-                <div class="meta-box-sortables ui-sortable">
+							</form>
 
-                    <div class="postbox">
+						</div> <!-- .inside -->
+					
+					</div> <!-- .postbox -->
 
-                        <h2><span>Let's Get Started!</span></h2>
+					<?php else: ?>
 
-                        <div class="inside">
-                            <form method="post" action="">
-                                <table class="form-table">
-                                    <tr>
-                                        <td>
-                                            <label for="wpimw_username">IMW Username</label>
-                                        </td>
-                                        <td>
-                                            <input name="wpimw_username" id="wpimw_username" type="text" value="" class="regular-text" />
-                                        </td>
-                                    </tr>
-                                </table>
+					<div class="postbox">
+					
+						<h3><span>Most Recent Badges</span></h3>
+						<div class="inside">
+							
+							<p>Below are your 20 most recent badges</p>
 
-                                <p>
-                                    <input class="button-primary" type="submit" name="wpimw_username_submit" value="Save" />
-                                </p>
-                            </form>
-                        </div>
-                        <!-- .inside -->
+							<ul class="wpimw-badges">
 
-                    </div>
-                    <!-- .postbox -->
-                    <div class="postbox">
+								<?php for( $i = 0; $i < 20; $i++ ): ?>
+								<li>
+									<ul>
+										<li>
+											<img width="120px" src="<?php echo $plugin_url . '/images/wp-badge.png'; ?>">								
+										</li>										
+										<li class="wpimw-badge-name">
+											<a href="#">Badge Name</a>
+										</li>
+										<li class="wpimw-project-name">
+											<a href="#">Project Name</a>
+										</li>
+									</ul>									
+								</li>								
+								<?php endfor; ?>
 
-                        <h2><span>Most Recent Badges</span></h2>
+							</ul>
 
-                        <div class="inside">
-                            <p>Below are your 20 most recent badges</p>
+						</div> <!-- .inside -->
+					
+					</div> <!-- .postbox -->					
 
-                            <ul class="wpimw-badges">
+					<?php endif; ?>
 
-                                <?php for( $i = 0; $i < 20; $i++ ): ?>
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <img width="120px" src="<?php echo $plugin_url . '/images/wp-badge.png'; ?>">
-                                            </li>
-                                            <li class="wpimw-badge-name">
-                                                <a href="#">Badge Name</a>
-                                            </li>
-                                            <li class="wpimw-project-name">
-                                                <a href="#">Project Name</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <?php endfor; ?>
+				</div> <!-- .meta-box-sortables .ui-sortable -->
+				
+			</div> <!-- post-body-content -->
+			
+			<!-- sidebar -->
+			<div id="postbox-container-1" class="postbox-container">
+				
+				<div class="meta-box-sortables">
+					
+					<?php if( isset( $wpimw_username ) || $wpimw_username != '' ): ?>
 
-                            </ul>
+					<div class="postbox">
+					
+						<h3><span>Mike the Frog's Profile</span></h3>
+						<div class="inside">
+							
+							<p><img width="100%" class="wpimw-gravatar" src="<?php echo $plugin_url . '/images/mike-the-frog.png'; ?>" alt="Mike the Frog Gravatar"></p>
 
-                        </div>
-                        <!-- .inside -->
+							<ul class="wpimw-badges-and-points">							
 
-                    </div>
-                    <!-- .postbox -->
+									<li>Badges: <strong>200</strong></li>
+									<li>Points: <strong>10000</strong></li>
 
-                </div>
-                <!-- .meta-box-sortables .ui-sortable -->
+							</ul>
 
-            </div>
-            <!-- post-body-content -->
+						</div> <!-- .inside -->
+						
+					</div> <!-- .postbox -->
+					
+					<?php endif; ?>
 
-            <!-- sidebar -->
-            <div id="postbox-container-1" class="postbox-container">
-
-                <div class="meta-box-sortables">
-
-                    <div class="postbox">
-
-                        <h3><span>Mike the Frog's Profile</span></h3>
-                        <div class="inside">
-
-                            <p><img width="100%" class="wpimw-gravatar" src="<?php echo $plugin_url . '/images/mike-the-frog.png'; ?>" alt="Mike the Frog Gravatar"></p>
-
-                            <ul class="wpimw-badges-and-points">
-
-                                <li>Badges: <strong>200</strong></li>
-                                <li>Points: <strong>10000</strong></li>
-
-                            </ul>
-
-                        </div>
-                        <!-- .inside -->
-
-
-                    </div>
-                    <!-- .postbox -->
-
-                </div>
-                <!-- .meta-box-sortables -->
-
-            </div>
-            <!-- #postbox-container-1 .postbox-container -->
-
-        </div>
-        <!-- #post-body .metabox-holder .columns-2 -->
-
-        <br class="clear">
-    </div>
-    <!-- #poststuff -->
-
-</div>
-<!-- .wrap -->
+				</div> <!-- .meta-box-sortables -->
+				
+			</div> <!-- #postbox-container-1 .postbox-container -->
+			
+		</div> <!-- #post-body .metabox-holder .columns-2 -->
+		
+		<br class="clear">
+	</div> <!-- #poststuff -->
+	
+</div> <!-- .wrap -->

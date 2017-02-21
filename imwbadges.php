@@ -45,6 +45,15 @@ function wpimw_badges_options_page() {
     
     global $plugin_url;
     
+    if( isset( $_POST['wpimw_form_submitted'] ) ) {
+        $hidden_field = esc_html( $_POST['wpimw_form_submitted'] );
+        
+        if( $hidden_field == 'Y' ) {
+            $wpimw_username = esc_html( $_POST['wpimw_username'] );
+            
+        }
+    }
+    
     require( 'inc/options-page-wrapper.php' );
         
 }
