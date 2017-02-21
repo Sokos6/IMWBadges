@@ -1,13 +1,3 @@
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
 <div class="wrap">
 
     <div id="icon-options-general" class="icon32"></div>
@@ -61,7 +51,7 @@
                                     <li>
                                         <ul>
                                             <li>
-                                                <img class="wpimw-gravatar" width="120px" src="<?php echo $plugin_url . '/images/wp-badge.png'; ?>">
+                                                <img width="120px" src="<?php echo $plugin_url . '/images/wp-badge.png'; ?>">
                                             </li>
                                             <li class="wpimw-badge-name">
                                                 <a href="#">Badge Name</a>
@@ -94,19 +84,21 @@
 
                     <div class="postbox">
 
-                        <h2><span><?php esc_attr_e(
-									'Sidebar Content Header', 'wp_admin_style'
-								); ?></span></h2>
-
+                        <h3><span>Mike the Frog's Profile</span></h3>
                         <div class="inside">
-                            <p>
-                                <?php esc_attr_e(
-									'Everything you see here, from the documentation to the code itself, was created by and for the community. WordPress is an Open Source project, which means there are hundreds of people all over the world working on it. (More than most commercial platforms.) It also means you are free to use it for anything from your cat’s home page to a Fortune 500 web site without paying anyone a license fee and a number of other important freedoms.',
-									'wp_admin_style'
-								); ?>
-                            </p>
+
+                            <p><img width="100%" class="wpimw-gravatar" src="<?php echo $plugin_url . '/images/mike-the-frog.png'; ?>" alt="Mike the Frog Gravatar"></p>
+
+                            <ul class="wptreehouse-badges-and-points">
+
+                                <li>Badges: <strong>200</strong></li>
+                                <li>Points: <strong>10000</strong></li>
+
+                            </ul>
+
                         </div>
                         <!-- .inside -->
+
 
                     </div>
                     <!-- .postbox -->
