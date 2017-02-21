@@ -1,4 +1,5 @@
-<div class="wrap">
+
+    <div class="wrap">
 
     <div id="icon-options-general" class="icon32"></div>
     <h1>IMW Badges</h1>
@@ -89,7 +90,7 @@
 
                             <p><img width="100%" class="wpimw-gravatar" src="<?php echo $plugin_url . '/images/mike-the-frog.png'; ?>" alt="Mike the Frog Gravatar"></p>
 
-                            <ul class="wptreehouse-badges-and-points">
+                            <ul class="wpimw-badges-and-points">
 
                                 <li>Badges: <strong>200</strong></li>
                                 <li>Points: <strong>10000</strong></li>

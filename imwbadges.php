@@ -49,4 +49,11 @@ function wpimw_badges_options_page() {
         
 }
 
+function wpimw_badges_styles() {
+    
+    wp_enqueue_style( 'wpimw_badges_styles', plugins_url( 'IMWBadges/wpimw-badges.css' ) );
+
+}
+add_action( 'admin_head', 'wpimw_badges_styles' );
+
 ?>
