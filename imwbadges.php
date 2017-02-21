@@ -14,6 +14,10 @@ Domain Path: /languages
 */
 
 
+$plugin_url = WP_PLUGIN_URL . '/IMWBadges';
+
+
+
 function wpimw_badges_menu() {
     
     /*
@@ -38,6 +42,8 @@ function wpimw_badges_options_page() {
         
         wp_die( 'You do not have sufficient permissions to access this page.' );
     } 
+    
+    global $plugin_url;
     
     require( 'inc/options-page-wrapper.php' );
         

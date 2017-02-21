@@ -6,9 +6,9 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
 
-    <div class="wrap">
+
+<div class="wrap">
 
     <div id="icon-options-general" class="icon32"></div>
     <h1>IMW Badges</h1>
@@ -28,19 +28,53 @@
 
                         <div class="inside">
                             <form method="post" action="">
-                            <table class="form-table">
-                             <tr>
-                                <td>
-                                    <label for="wpimw_username">IMW Username</label>
-                                </td>
-                                <td>
-                                    <input name="wpimw_username" id="wpimw_username" type="text" value="" class="regular-text" />
-                                </td> 
-                             </tr>
-                            </table>
-                            
-                            <p><input class="button-primary" type="submit" name="wpimw_username_submit" value="Save" /></p>
+                                <table class="form-table">
+                                    <tr>
+                                        <td>
+                                            <label for="wpimw_username">IMW Username</label>
+                                        </td>
+                                        <td>
+                                            <input name="wpimw_username" id="wpimw_username" type="text" value="" class="regular-text" />
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <p>
+                                    <input class="button-primary" type="submit" name="wpimw_username_submit" value="Save" />
+                                </p>
                             </form>
+                        </div>
+                        <!-- .inside -->
+
+                    </div>
+                    <!-- .postbox -->
+                    <div class="postbox">
+
+                        <h2><span>Most Recent Badges</span></h2>
+
+                        <div class="inside">
+                            <p>Below are your 20 most recent badges</p>
+
+                            <ul class="wpimw-badges">
+
+                                <?php for( $i = 0; $i < 20; $i++ ): ?>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <img class="wpimw-gravatar" width="120px" src="<?php echo $plugin_url . '/images/wp-badge.png'; ?>">
+                                            </li>
+                                            <li class="wpimw-badge-name">
+                                                <a href="#">Badge Name</a>
+                                            </li>
+                                            <li class="wpimw-project-name">
+                                                <a href="#">Project Name</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <?php endfor; ?>
+
+                            </ul>
+
                         </div>
                         <!-- .inside -->
 
